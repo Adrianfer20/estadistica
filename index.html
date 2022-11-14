@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/scroll.css"> -->
+    </head>
+<body class="font-Roboto text-slate-800">
+    <header class="max-w-screen-lg w-full md:w-10/12 mx-auto px-4 py-24">
+        <h1 class="text-6xl font-Oswald font-bold uppercase">Estadistica</h1>
+        <p class="text-slate-700">Para obtener los datos ordenados y realizar el cuadro de "Datos Ordenados en Clases" debe ingresar los datos separados por comas <strong>","</strong> es decir si contamos por ejemplo con dos valores <strong>1</strong> y <strong>2</strong> se ingresaria de la siguente manera <strong>"1,2"</strong> OJO sin las comas.  Si en los valores a ingresar cuenta con decimales se usara <strong>"."</strong> ejemplo <strong>"7.00, 7.50"</strong></p>
+
+        <form class="my-12">
+            <div class="max-w-screen-sm w-full flex items-center justify-between bg-indigo-100  rounded-full shadow px-2 py-1 mx-auto">
+                <input id="input-orderNumber" class="w-10/12 block bg-transparent focus:outline-none focus:bg-transparent pl-2" type="text" placeholder="Ingresar valores...">
+                <button id="btn-order" class="bg-indigo-600 text-slate-100 rounded-full px-2 py-1">Resultado</button>
+            </div>
+        </form>
+    </header>
+
+    <section class="p-4 mb-24">
+        <article class="max-w-screen-lg w-full md:w-10/12 mx-auto mb-20">
+            <h2 class="text-lg text-semibold text-center uppercase mb-4">Lista de Numeros Ordenados</h2>
+            <div id="orderNumber" class="grid grid-cols-12 gap-2">
+                <span class="text-center col-span-12">Sin Datos</span>
+            </div>
+        </article>
+
+        <article class="max-w-screen-lg w-full md:w-10/12 mx-auto mb-20 ">
+            <h2 class="text-lg text-semibold text-center uppercase mb-4">Cuadro de Datos</h2>
+            <div id="wrapper" class="max-h-screen w-full flex flex-wrap text-center scale-95 md:scale-100 overflow-y-auto">
+                <div class="w-full sticky top-0 flex flex-wrap items-center bg-indigo-100 text-indigo-600 rounded shadow px-2 py-1 mb-2">
+                    <div class="w-4/12 md:w-2/12 grid grid-cols-3 my-1">
+                        <h2 class="col-span-1 font-bold">Xi</h2>
+                        <h2 class="col-span-1 font-bold">Fi</h2>
+                        <h2 class="col-span-1 font-bold">Fa</h2>
+                    </div>
+                    <h2 class="w-4/12 md:w-2/12 font-bold my-1">Fr = Fa/N</h2>
+                    <h2 class="w-4/12 md:w-3/12 font-bold my-1">Fra = Fr+Fr</h2>
+                    <h2 class="w-6/12 md:w-2/12 font-bold my-1">F% = Fr*100</h2>
+                    <h2 class="w-6/12 md:w-3/12 font-bold my-1">Fa% = F% + F%</h2>
+                </div>
+                <!-- <div class="w-full flex">
+                    <div class="w-1/12 flex">
+                        <h2 class="w-6/12">Xi</h2>
+                        <h2 class="w-6/12">Fi</h2>
+                    </div>
+                    <h2 class="w-1/12">Fa</h2>
+                    <h2 class="w-2/12">Fr = Fa/N</h2>
+                    <h2 class="w-3/12">Fra</h2>
+                    <h2 class="w-3/12">F% = Fr*100</h2>
+                    <h2 class="w-2/12">Fa%</h2>
+                </div> -->
+            </div>
+        </article>
+    </section>
+    
+            <footer class="w-full px-4 py-6">
+                <h4 class="font-Oswald text-center">Desarrollador - <strong class="font-bold">@AdrianferMiranda</strong></h4>
+            </footer>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
