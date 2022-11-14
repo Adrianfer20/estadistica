@@ -55,6 +55,9 @@ const getShowFap = (Fap, indexFap) => {
 const showResult = (result) => {
     const Xi = [...new Set(result.Xi)];
     const $wrapper = document.getElementById('wrapper');
+    const $head = document.getElementById('head-wrapper');
+    $wrapper.innerHTML = '';
+    $wrapper.appendChild($head); 
     const $fragment = new DocumentFragment();
     Xi.forEach((numberXi,index) => {
         const $divRow = document.createElement('div');
@@ -105,6 +108,14 @@ const showOrderNumber = () => {
     if(!value) return alert('Debe introducir obligatoriamente al menos un valor');
     //  const stringNumber = "7.24,7.25,7.26,7.27,7.27,7.28,7.28,7.29,7.29,7.29,7.30,7.30,7.30, 7.31, 7.31,7.32,7.32, 7.32, 7.32,7.32,7.33,7.33,7.33,7.34, 7.34, 7.34,7.34,7.35,7.35,7.35,7.35,7.35,7.35,7.35,7.35,7.36,7.36,7.36,  7.36,7.36,7.36,7.37,7.37,7.37,7.38,7.38,7.38,7.39,7.39,7.39,7.40,7.40,7.40,7.41,7.41";
     const result = getProcess(value);
+    let isError = false;
+    result.Xi.forEach((numberXi, index) => {
+        let position = index + 1;
+        let message = '¡Has ingresado un valor que no es valido, en la posicion: ';
+       if(!(numberXi>=0)){isError = true; return alert(message + position)}
+    });
+
+    if(isError) return;
     showXi(result.Xi);
     showResult(result);
 }

@@ -1,6 +1,7 @@
 const getOrderClass = (stringNumber) => {
-    const arrNumber = stringNumber.split(",");
-    return arrNumber.sort((a, b) => {
+    const arrNumber = stringNumber.split(",")
+    const mapTrimNumber = arrNumber.map(number => number.trim());
+    return mapTrimNumber.sort((a, b) => {
         a = Number(a);
         b = Number(b);
         if(a == b) {
